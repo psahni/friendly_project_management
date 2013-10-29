@@ -1,4 +1,9 @@
-friendly_project_management
-===========================
+## Friendly Project Management
 
-A simple and friendly project management and collaboration tool
+An open source project management tool in Ruby on Rails.
+
+
+## Credits
+
+Prashant Sahni
+prashant.sahni5@gmail.com
