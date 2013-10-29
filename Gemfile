@@ -10,7 +10,9 @@ gem 'jquery-rails'
 
 # Database
 #------------------------------------------------------------------------------
-gem 'mysql2'
+#gem 'mysql2'
+
+gem 'pg', '~> 0.15.0'
 
 
 # gem 'mongoid', github: "ekampp/mongoid"
@@ -41,8 +43,9 @@ gem 'mysql2'
 #gem 'rails-backbone', github: "ekampp/backbone-rails"
 #gem 'jquery-rails'
 #gem 'fancybox-rails', github: "sverigemeny/fancybox-rails"
-gem "twitter-bootstrap-rails"
-gem "less-rails-bootstrap"
+# gem "twitter-bootstrap-rails"
+
+#gem "less-rails-bootstrap"
 # -> https://github.com/metaskills/less-rails-bootstrap
 # Photo Upload
 #------------------------------------------------------------------------------
@@ -52,20 +55,25 @@ gem "less-rails-bootstrap"
 # Sphinx Search
 # gem 'thinking-sphinx', :git => 'git://github.com/pat/thinking-sphinx.git',  :ref => '8f0e34b4a68494738d8dd5a1cb6bcf379adbf640'
 # gem 'ts-delayed-delta', '1.1.1', :require => 'thinking_sphinx/deltas/delayed_delta'          #Delayed Deltas for Thinking Sphinx, using Delayed Job.
+#gem 'compass-blueprint'
+#gem 'compass-rails' , :git => 'https://github.com/Compass/compass-rails.git', :branch => 'rails4'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
+
 group :assets do
-  #gem 'sass-rails'
   gem "coffee-rails"
   gem 'uglifier'
+  gem 'sass-rails'
+  gem 'bootstrap-sass', '~> 2.1.0.0'
+  gem 'compass-rails', github: "ekampp/compass-rails"
 
   # gem 'font-awesome-sass-rails', github: "littlebtc/font-awesome-sass-rails", branch: "master"
   # gem 'compass-rails', github: "ekampp/compass-rails"
   # gem 'normalize-rails'
-  # gem 'bootstrap-sass', '~> 2.1.0.0'
   # gem 'sprockets-rails', github: 'rails/sprockets-rails'
-
+  # gem 'compass-twitter-bootstrap'
 end
 
 
@@ -129,7 +137,7 @@ end
 # gem 'jbuilder'
 
 # App Servers
-# gem 'unicorn'
+ gem 'unicorn'
 
 # Deployment
 # gem 'capistrano'
