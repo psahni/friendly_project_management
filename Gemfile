@@ -1,8 +1,10 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
+
+ruby "1.9.3"
 
 # Edge Rails
 #------------------------------------------------------------------------------
-gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'rails', :git => 'git://github.com/rails/rails.git', :branch => 'master'
 
 # UJS
 gem 'jquery-rails'
@@ -145,3 +147,4 @@ end
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', :platforms => :ruby
+gem 'passenger'
