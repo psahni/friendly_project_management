@@ -1,0 +1,29 @@
+
+<div class='row top-buffer'>
+  <div class='span7'>
+
+    <%=form_for @project, :class =>'bs-docs-example form-horizontal ' do |f|%>
+
+        <div class="control-group">
+          <%=f.label 'Write One Liner', :class => 'control-label', :for => 'inputEmail'%>
+          <div class='controls'>
+            <%=f.text_field :title%>
+            <span class='has-error'><%=f.object.errors[:title][0] if f.object.errors[:title] %></span>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <%=f.label 'Write Short description', :class => 'control-label', :for => 'inputDescription'%>
+          <div class='controls'>
+            <%=f.text_area :description, :rows => 8%>
+            <span class='has-error'><%=f.object.errors[:description][0] if f.object.errors[:description]%></span>
+          </div>
+        </div>
+
+        <div class='control-group'>
+          <%=f.submit 'Create'%>
+        </div>
+
+    <% end %>
+</div>
+</div>

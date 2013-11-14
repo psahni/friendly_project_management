@@ -1,7 +1,9 @@
 MyBaseApp::Application.routes.draw do
-  get "welcome/index"
+
+  match '/myprojects', :to => 'projects#index', :via => :get
   root :to => 'welcome#index'
 
+  resources :projects
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

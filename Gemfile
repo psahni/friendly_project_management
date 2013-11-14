@@ -25,7 +25,7 @@ gem 'pg', '~> 0.15.0'
 
 # Authentication
 #------------------------------------------------------------------------------
-# gem 'devise'
+gem 'devise'
 
 
 
@@ -99,13 +99,13 @@ end
 # Testing Environment
 #-----------------------------------------
 
-#gem "rspec-rails", ">= 2.12.2",               :group => [:development, :test]
-#gem "database_cleaner", ">= 1.0.0.RC1",       :group => :test
-#gem "email_spec", ">= 1.4.0",                 :group => :test
-#gem "cucumber-rails",                         :group => :test, :require => false
-#gem "launchy", ">= 2.2.0",                    :group => :test
-#gem "capybara", ">= 2.0.3",                   :group => :test
-#gem "factory_girl_rails", ">= 4.2.0",         :group => [:development, :test]
+gem "rspec-rails", ">= 2.12.2",               :group => [:development, :test]
+gem "database_cleaner", ">= 1.0.0.RC1",       :group => :test
+gem "email_spec", ">= 1.4.0",                 :group => :test
+gem "cucumber-rails",                         :group => :test, :require => false
+gem "launchy", ">= 2.2.0",                    :group => :test
+gem "capybara", ">= 2.0.3",                   :group => :test
+gem "factory_girl_rails", ">= 4.2.0",         :group => [:development, :test]
 
 # Caching/ Russian Doll Caching [ Not Needed In Rails 4 ]
 # gem 'cache_digests'
@@ -148,3 +148,10 @@ end
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', :platforms => :ruby
 gem 'passenger'
+
+#Capybara.configure do |config|
+#  config.match = :one
+#  config.exact_options = true
+#  config.ignore_hidden_elements = true
+#  config.visible_text_only = true
+#end
