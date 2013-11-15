@@ -1,5 +1,6 @@
 MyBaseApp::Application.routes.draw do
 
+  devise_for :users
   match '/myprojects', :to => 'projects#index', :via => :get
   root :to => 'welcome#index'
 

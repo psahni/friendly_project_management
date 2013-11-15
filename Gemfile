@@ -4,7 +4,7 @@ ruby "1.9.3"
 
 # Edge Rails
 #------------------------------------------------------------------------------
-gem 'rails', :git => 'git://github.com/rails/rails.git', :branch => 'master'
+gem 'rails', '4.0.1'
 
 # UJS
 gem 'jquery-rails'
@@ -25,7 +25,7 @@ gem 'pg', '~> 0.15.0'
 
 # Authentication
 #------------------------------------------------------------------------------
-gem 'devise'
+gem 'devise', :git => 'https://github.com/plataformatec/devise.git', :branch => 'master'
 
 
 
