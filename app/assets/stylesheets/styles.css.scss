@@ -1,7 +1,55 @@
 // I gather this file is a starting point for the project.
-@import "bootstrap";
-
+//@import "bootstrap";
 // Include responsive Bootstrap styles
-@import "bootstrap-responsive";
+//@import "bootstrap-responsive";
+//@import 'custom'   ;
 
-@import 'custom'   ;
+body {
+  text-align: center;
+  min-width: 740px;
+  padding: 0;
+  margin: 0;
+}
+
+#wrapper {
+  text-align: left;
+  width: 740px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+}
+
+#content {
+  margin: 0 200px 0 0;
+}
+
+#content .inner {
+  padding-top: 1px;
+  margin: 0 10px 10px 10px;
+}
+
+#side {
+  float: right;
+  width: 180px;
+  margin: 0;
+}
+
+#side .inner {
+  padding-top: 1px;
+  margin: 0 10px 10px 10px;
+}
+
+#footer {
+  margin-top: 10px;
+  clear: both;
+}
+
+#footer .inner {
+  margin: 10px;
+}
+
+
+//#---------------------------------------------------------------------------------------------
+
+
+

@@ -68,7 +68,7 @@ group :assets do
   gem "coffee-rails"
   gem 'uglifier'
   gem 'sass-rails'
-  gem 'bootstrap-sass', '~> 2.1.0.0'
+ # gem 'bootstrap-sass', '~> 2.1.0.0'
   gem 'compass-rails', github: "ekampp/compass-rails"
 
   # gem 'font-awesome-sass-rails', github: "littlebtc/font-awesome-sass-rails", branch: "master"
@@ -106,6 +106,12 @@ gem "cucumber-rails",                         :group => :test, :require => false
 gem "launchy", ">= 2.2.0",                    :group => :test
 gem "capybara", ">= 2.0.3",                   :group => :test
 gem "factory_girl_rails", ">= 4.2.0",         :group => [:development, :test]
+gem "selenium-webdriver", "~> 2.34.0" ,       :group => :test
+gem 'poltergeist'
+gem 'cucumber'
+gem 'rubyzip',  '~> 0.9.9' # active record has loading issue with rubyzip 1.0.0, rolling back
+
+
 
 # Caching/ Russian Doll Caching [ Not Needed In Rails 4 ]
 # gem 'cache_digests'

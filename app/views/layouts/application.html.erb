@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MyBaseApp</title>
+  <title>Easy Project Management</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -11,18 +11,44 @@
   <script src="../assets/js/html5shiv.js"></script>
   <![endif]-->
 
-  <!-- Fav and touch icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
-  <link rel="shortcut icon" href="../assets/ico/favicon.png">
 
 </head>
 <body>
-    <%=render :partial => 'layouts/navbar'%>
-    <%=render :partial => 'layouts/carousal'%>
-<%= yield %>
+
+
+<div id="wrapper">
+  <header id='header'>
+       <nav role='navigation' id='navigation'>
+         <ul>
+           <li>
+            <a href="#">Help!</a>
+           </li>
+           <li>
+             <a href="#">FAQ</a>
+           </li>
+         </ul>
+       </nav>
+  </header>
+  <section id="side">
+    <div class="inner">
+      <p>
+        Side bar Content
+      </p>
+    </div>
+  </section>
+  <section id="content">
+    <div class="inner">
+      <%= yield %>
+    </div>
+  </section>
+  <footer id="footer">
+    <div class="inner">
+      <p>Footer Content</p>
+    </div>
+  </footer>
+</div>
+    <%#=render :partial => 'layouts/navbar'%>
+    <%#=render :partial => 'layouts/carousal'%>
 
 </body>
 </html>

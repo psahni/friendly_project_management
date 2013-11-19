@@ -50,7 +50,6 @@ GEM
     atomic (1.1.14)
     awesome_print (1.1.0)
     bcrypt-ruby (3.1.2)
-    bootstrap-sass (2.1.0.1)
     builder (3.1.4)
     capybara (2.1.0)
       mime-types (>= 1.16)
@@ -58,7 +57,10 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    childprocess (0.3.9)
+      ffi (~> 1.0, >= 1.0.11)
     chunky_png (1.2.9)
+    cliver (0.2.2)
     coffee-rails (4.0.0)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0.beta, < 5.0)
@@ -102,6 +104,7 @@ GEM
     factory_girl_rails (4.3.0)
       factory_girl (~> 4.3.0)
       railties (>= 3.0.0)
+    ffi (1.9.3)
     gherkin (2.12.2)
       multi_json (~> 1.3)
     hike (1.2.3)
@@ -132,6 +135,11 @@ GEM
       rack
       rake (>= 0.8.1)
     pg (0.15.1)
+    poltergeist (1.4.1)
+      capybara (~> 2.1.0)
+      cliver (~> 0.2.1)
+      multi_json (~> 1.0)
+      websocket-driver (>= 0.2.0)
     polyglot (0.3.3)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -175,11 +183,17 @@ GEM
       ruby-debug-base19 (>= 0.11.19)
     ruby_core_source (0.1.5)
       archive-tar-minitar (>= 0.5.2)
+    rubyzip (0.9.9)
     sass (3.2.12)
     sass-rails (4.0.1)
       railties (>= 4.0.0, < 5.0)
       sass (>= 3.1.10)
       sprockets-rails (~> 2.0.0)
+    selenium-webdriver (2.34.0)
+      childprocess (>= 0.2.5)
+      multi_json (~> 1.0)
+      rubyzip
+      websocket (~> 1.0.4)
     sprockets (2.10.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -208,6 +222,8 @@ GEM
       raindrops (~> 0.7)
     warden (1.2.3)
       rack (>= 1.0)
+    websocket (1.0.7)
+    websocket-driver (0.3.0)
     wirble (0.1.3)
     xpath (2.0.0)
       nokogiri (~> 1.3)
@@ -217,10 +233,10 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
-  bootstrap-sass (~> 2.1.0.0)
   capybara (>= 2.0.3)
   coffee-rails
   compass-rails!
+  cucumber
   cucumber-rails
   database_cleaner (>= 1.0.0.RC1)
   debugger
@@ -232,11 +248,14 @@ DEPENDENCIES
   launchy (>= 2.2.0)
   passenger
   pg (~> 0.15.0)
+  poltergeist
   rails (= 4.0.1)
   rspec-rails (>= 2.12.2)
   ruby-debug-base19x (~> 0.11.30.pre4)
   ruby-debug19
+  rubyzip (~> 0.9.9)
   sass-rails
+  selenium-webdriver (~> 2.34.0)
   therubyracer
   uglifier
   unicorn
